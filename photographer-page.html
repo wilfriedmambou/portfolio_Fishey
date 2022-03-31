@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <title>FishEye</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    
+    <link rel="stylesheet" href="CSS/photographer-page.css" />
+    <link rel="stylesheet" href="CSS/form-modale.css" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+        <a tabindex="1" class="fisheye" role="link" href="index.html">
+            <img src="img/Logo.png.png" alt="FishEye logo">
+        </a>
+
+    <main>
+        <section id="photographer">
+      
+        </section>
+
+        <div class="photographer__trier" aria-label="menubar trier les photos par" aria-expanded="false"></div>
+            <label class="trier_par" for="trier_par">Trier par</label>
+            <div id="hover-select" role="navigation" class="select-box">
+              <input id="one" data-filtre="popularite" class="trier_par_value popularite" type="radio" name="hover-select" checked>
+              <label tabindex=" 4" for="one" role="button" aria-label="menuitem popularite">Popularité</label>
+
+              <input id="two" aria-label="menuitem date" data-filtre="popularite" class="trier_par_value date" type="radio" name="hover-select">
+              <label tabindex="4" for="two" role="button">Date</label>
+
+              <input id="three" aria-label="menuitem titre" data-filtre="popularite" class="trier_par_value titre" type="radio" name="hover-select">
+              <label tabindex="4" for="three" role="button">Titre</label>
+            </div>
+          </div>
+
+        <section class="photographer__content">
+            
+        </section>
+
+        <aside class="photographer_statistics">
+            <div class="photographer_statistics_likes">
+                <span class="photographer_statistics_likes_nbr"> </span>
+                <img src="img/heartBlack.svg" alt="heart">
+            </div>
+            <div class="photographer_statistics_likes_price">€/jour</div>
+        </aside>
+
+        <div class="bground" id="form-contact">
+            <div class="content">
+              <button tabindex="3" class="close"></button>
+              <div class="modal-body">
+                  <div class="contactez-moi">Contactez-moi</div>
+                  <div class="contactez-moi_photographer"></div>
+                <form
+                  id="form"
+                  name="reserve"
+                  action="index.html"
+                  method="get"
+                >
+                  <div
+                    class="formData">
+                    <label for="first">Prénom</label><br>
+                    <input 
+                      tabindex="2"
+                      aria-labelledby="prénom"
+                      class="text-control"
+                      type="text"
+                      id="first"
+                      name="first"
+                      minlength="2"
+                      required
+                    />
+                    <span class="errorMessage" id="prenomInvalide"></span><br>
+                  </div>
+                  <div
+                    class="formData">
+                    <label for="last">Nom</label><br>
+                    <input
+                      tabindex="2"
+                      aria-labelledby="nom"
+                      class="text-control"
+                      type="text"
+                      id="last"
+                      name="last"
+                      minlength="2"
+                      required
+                    />
+                    <span class="errorMessage" id="nomInvalide"></span><br>
+                  </div>
+                  <div
+                    class="formData">
+                    <label for="email">E-mail</label><br>
+                    <input
+                      tabindex="2"
+                      aria-labelledby="email"
+                      class="text-control"
+                      type="email"
+                      id="email"
+                      name="email"
+                      required 
+                    />
+                    <span class="errorMessage" id="emailInvalide"></span><br>
+                  </div>
+                  <divc 
+                    class="formData">
+                    <label for="message">Votre message</label>
+                    <textarea 
+                        tabindex="2"
+                        aria-labelledby="ici votre message"
+                        class="text-control"
+                        minlength="50"
+                        name="message"
+                        id="message" ></textarea>
+                  </div>
+                </form>
+                <div class="content-success" id="content-success">
+                    <p>Merci! Votre formulaire a bien été pris en compte.</p>
+                  </div>
+                <div>
+                    <input
+                        tabindex="2"
+                        class="btn-submit"
+                        type="submit"
+                        value="Envoyer"
+                    />
+                    <span class="errorMessage" id="messageInvalide"></span><br>
+                    </div>
+              </div>
+            </div>
+        </div>
+        <div class="lb-bground">
+            <div class="lightbox-modal" role="dialog">
+                <span tabindex="5" class="lb-close" alt="fermer la boîte de dialogue"></span>
+                <div class="lightbox-modal_body">
+                    <img tabindex="5" class="fleche previous" role="link" src="img/chevron-left-solid.svg" alt="flèche précédente">
+                    <div id="photographer-media">
+                    </div>
+                    <img tabindex="5"class="fleche next" role="link" src="img/chevron-right-solid.svg" alt="flèche suivante">
+                </div>
+            </div>
+        </div>
+            
+    </main>
+</body>
+
+<!-- <script type="text/javascript" src="js/filterByPhotographerId.js"></script>
+<script type="text/javascript" src="js/photographerPrice.js"></script>
+<script type="text/javascript" src="js/createPhotographerProfile.js"></script>
+<script type="text/javascript" src="js/createPhotographerMedia.js"></script>
+<script type="text/javascript" src="js/mediasFactory.js"></script>
+
+<!-- <script type="text/javascript" src="js/lightboxOpen.js"></script> -->
+<!-- <script type="text/javascript" src="js/lightbox.js"></script> -->
+<!-- <script type="text/javascript" src="js/fetchData.js"></script> -->
+<!-- <script type="text/javascript" src="js/formValidation.js"></script> -->
+<script type="text/javascript" src="js/formContact.js"></script> 
+<script type="text/javascript" src="js/openCloseModal.js"></script>
+<script type="module" src="js/pages/photographer-page.js"></script>
+<!-- <script type="text/javascript" src="js/openCloseModal.js"></script> -->
+<!-- <script type="text/javascript" src="js/likeTotalNumber.js"></script> -->
+<!-- <script type="text/javascript" src="js/logInputValue.js"></script> -->
+
+
+
+
+</html>

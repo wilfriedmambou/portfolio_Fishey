@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+    <head>
+        <meta charset="utf-8" />
+        <title>FishEye</title>
+        <meta name="viewport" content="width=device-width,initial-scale=1" />
+        <link rel="stylesheet" href="CSS/style.css" />
+        
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700&display=swap" rel="stylesheet">
+
+    </head>
+
+
+    <body>
+        <header>
+            <img src="img/Logo.png.png" alt="FishEye logo">
+            <nav aria-label="Photographer categories" class="photographer__categories" role="search">
+                <ul class="category">
+                    <li>
+                        <button type="button" class="buttonTag" data-tag="portrait">#Portaits</button>
+                    </li>
+                    <li>
+                        <button type="button" class="buttonTag" data-tag="art">#Art</button>
+                    </li>
+                    <li>
+                        <button type="button" class="buttonTag" data-tag="fashion">#Fashion</button>
+                    </li>
+                    <li>
+                        <button type="button" class="buttonTag" data-tag="architecture">#Architecture</button>
+                    </li>
+                    <li>
+                        <button type="button" class="buttonTag" data-tag="travel">#Travel</button>
+                    </li>
+                    <li>
+                        <button type="button" class="buttonTag" data-tag="sport">#Sport</button>
+                    </li>
+                    <li>
+                        <button type="button" class="buttonTag" data-tag="animals">#Animals</button>
+                    </li>
+                    <li>
+                        <button type="button" class="buttonTag" data-tag="events">#Events</button>
+                    </li>
+                </ul>
+            </nav>
+            <h1 class="nos_photographes">Nos photographes</h1>
+            <button type="button" id="passer_au_contenu">Passer au contenu</button>
+        </header>
+
+        <main>
+            <div id="photographers" class="photographer__wrapper">
+               
+            </div>
+        </main>
+
+        <footer>
+        </footer>
+    </body>
+    <!-- <script type="text/javascript" src="js/filterByTag.js"></script> -->
+    <!-- <script type="text/javascript" src="js/fetchData.js"></script> -->
+    <!-- <script type="text/javascript" src="js/createPhotographers.js"></script> -->
+    <script type="module" src="js/pages/index.js"></script>
+    <!-- <script type="text/javascript" src="js/passerAuContenu.js"></script> -->
+</html>
